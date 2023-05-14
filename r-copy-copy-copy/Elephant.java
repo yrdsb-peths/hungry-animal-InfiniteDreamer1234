@@ -6,6 +6,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
+
+GreenfootSound elephantSound = new GreenfootSound("Elephant.mp3");
 public class Elephant extends Actor
 {
     /**
@@ -43,6 +45,7 @@ public class Elephant extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.createBread();
             world.increaseScore();
+            elephantSound.play();
         }   
         
     }
