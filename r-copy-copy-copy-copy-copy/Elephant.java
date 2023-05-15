@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Elephant here.
+ * The elephant will move around the collect the bread. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @ Justin Dong
+ * @ May 2023
  */
 public class Elephant extends Actor
 {

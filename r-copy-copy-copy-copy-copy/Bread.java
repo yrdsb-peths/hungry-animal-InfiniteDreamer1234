@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Bread here.
+ * The bread will fall down randomly from the sky. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @ Justin Dong
+ * @ May 2023
  */
 public class Bread extends Actor
 {
