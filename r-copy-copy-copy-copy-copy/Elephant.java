@@ -11,6 +11,15 @@ public class Elephant extends Actor
     
     
     GreenfootSound elephantSound = new GreenfootSound("Elephant.mp3");
+    GreenfootImage idle = new GreenfootImage("elephant images/tile000"); 
+    
+    
+    public Elephant ()
+    {
+        setImage(idle);
+    }
+    
+    
     
     /**
      * Act - do whatever the Elephant wants to do. This method is called whenever
