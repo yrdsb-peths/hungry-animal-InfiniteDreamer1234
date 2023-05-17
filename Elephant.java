@@ -9,15 +9,24 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Elephant extends Actor
 {   
     GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
-    GreenfootImage idle = new GreenfootImage("elephant_idle.png"); 
+    GreenfootImage[] idle = new GreenfootImage[8]; 
     
     
     public Elephant ()
     {
-        setImage(idle);
+        for(int i = 0; i < idle.length; i++)
+        {
+            idle[i] = new GreenfootImage("elephant_idle/idle" + i + ".png");
+        }
+        setImage(idle[0]);
     }
 
-    
+    int imageIndex = 0;
+    public void animateElephant()
+    {
+        setImage(idle[imageIndex]);
+        imageIndex = (imageIndex + 1) % idle.length;
+    }
     
     /**
      * Act - do whatever the Elephant wants to do. This method is called whenever
@@ -34,16 +43,18 @@ public class Elephant extends Actor
             move(1);
         }
         
-        if(Greenfoot.isKeyDown("up"))
+        if(Greenfoot.isKeyDown("a"))
         {
-            
+            move(-1);
         }
-        else if(Greenfoot.isKeyDown("down"))
+        else if(Greenfoot.isKeyDown("d"))
         {
-        
+            move(1);
         }
         
         eat();
+        
+        animateElephant();
     }
     
     public void eat()
