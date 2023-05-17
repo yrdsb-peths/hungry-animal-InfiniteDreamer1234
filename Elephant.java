@@ -1,13 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Elephant here.
+ * The elephant will move around the collect the bread. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @ Justin Dong
+ * @ May 2023
  */
 public class Elephant extends Actor
-{
+{   
+    GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
+    GreenfootImage idle = new GreenfootImage("elephant_idle.png"); 
+    
+    
+    public Elephant ()
+    {
+        setImage(idle);
+    }
+
+    
+    
     /**
      * Act - do whatever the Elephant wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -43,6 +54,7 @@ public class Elephant extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.createBread();
             world.increaseScore();
+            elephantSound.play();
         }   
         
     }
