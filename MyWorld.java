@@ -9,7 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @ May 2023
  */
 
-
 public class MyWorld extends World
 {
 
