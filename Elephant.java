@@ -85,6 +85,19 @@ public class Elephant extends Actor
             facing = "right";
         }
         
+        if(Greenfoot.isKeyDown("shift"))
+        {
+            move(-2);
+            facing = "left";
+            
+        }
+        
+        if(Greenfoot.isKeyDown("enter"))
+        {
+             move(2);
+             facing = "right";
+        }
+        
         eat();
         
         animateElephant();
@@ -99,7 +112,9 @@ public class Elephant extends Actor
             world.createBread();
             world.increaseScore();
             elephantSound.play();
-        }   
+        } 
+        
+        
         
     }
 }

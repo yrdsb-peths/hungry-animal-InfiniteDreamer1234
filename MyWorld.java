@@ -12,6 +12,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
 
+    GreenfootSound worldSound = new GreenfootSound ("Music.mp3");
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -32,7 +34,11 @@ public class MyWorld extends World
         
         
         createBread();
+        createApple();
+        
+        worldSound.playLoop();
     }
+    
     
     public void gameOver()
     {
@@ -52,5 +58,13 @@ public class MyWorld extends World
         int y = 0;
         addObject(bread, x, y);
         
+    }
+    
+    public void createApple()
+    {
+        Apple apple = new Apple();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(apple, x, y);
     }
 }
