@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TitleScreen extends World
 {
+    
+    GreenfootImage wild = new GreenfootImage("Tree.jpg");
     Label titleLabel = new Label("Elephant's Adventure", 60);
     /**
      * Constructor for objects of class TitleScreen.

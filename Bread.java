@@ -21,6 +21,9 @@ public class Bread extends Actor
         {
             world.gameOver();
             world.removeObject(this);
+            Greenfoot.stop(); 
+             
         }
+         
     }
 }

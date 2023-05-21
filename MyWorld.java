@@ -38,7 +38,14 @@ public class MyWorld extends World
         
         worldSound.playLoop();
     }
-    
+    public void act()
+    {
+        if(Greenfoot.isKeyDown("space"))
+        {
+            MyWorld gameWorld = new MyWorld();
+            Greenfoot.setWorld(gameWorld);
+        }
+    }
     
     public void gameOver()
     {
@@ -49,6 +56,10 @@ public class MyWorld extends World
     {
         score++;
         scorelabel.setValue(score);
+        if(score % 5 == 0)
+        {
+            createApple();
+        }
     }
     public void decreaseScore()
     {
