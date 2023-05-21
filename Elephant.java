@@ -99,7 +99,7 @@ public class Elephant extends Actor
         }
         
         eat();
-        
+        avoid();
         animateElephant();
     }
     
@@ -116,5 +116,17 @@ public class Elephant extends Actor
         
         
         
+    }
+    
+    public void avoid()
+    {
+         if(isTouching(Apple.class))
+         {
+            removeTouching(Apple.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createApple();
+            world.decreaseScore();
+            elephantSound.play();
+        }
     }
 }

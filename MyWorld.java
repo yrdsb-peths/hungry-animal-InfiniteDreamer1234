@@ -50,6 +50,11 @@ public class MyWorld extends World
         score++;
         scorelabel.setValue(score);
     }
+    public void decreaseScore()
+    {
+        score--;
+        scorelabel.setValue(score);
+    }
     
     public void createBread()
     {
