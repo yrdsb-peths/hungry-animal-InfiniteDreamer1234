@@ -3,7 +3,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * The main world of the game.
  * 
  * @Justin Dong 
  * @ May 2023
@@ -21,6 +21,7 @@ public class MyWorld extends World
     
     public int score = 0;
     Label scorelabel;
+   
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -59,13 +60,23 @@ public class MyWorld extends World
         if(score % 5 == 0)
         {
             createApple();
+            
         }
+        if(score % 2 == 0)
+        {
+            createOrange();
+            
+        }
+        
+        
     }
     public void decreaseScore()
     {
         score--;
         scorelabel.setValue(score);
     }
+    
+    
     
     public void createBread()
     {
@@ -83,4 +94,15 @@ public class MyWorld extends World
         int y = 0;
         addObject(apple, x, y);
     }
+    
+     public void createOrange()
+    {
+        Orange orange = new Orange();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(orange, x, y);
+    }
+
+    
+    
 }

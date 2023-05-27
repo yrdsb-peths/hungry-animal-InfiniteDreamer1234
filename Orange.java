@@ -1,35 +1,30 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Will have the apple fall from the sky.
+ * The orange will fall randomly from the sky.
  * 
- * @ Justin Dong
- * @ May 2023  
+ * @ Justin Dong  
+ * @ May 2023 
  */
-public class Apple extends Actor
+public class Orange extends Actor
 {
     /**
-     * Act - do whatever the Apple wants to do. This method is called whenever
+     * Act - do whatever the Orange wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
+         setLocation(getX(), getY() +1);
         
-       
-        setLocation(getX(), getY() +1);
         MyWorld world = (MyWorld) getWorld();
         if(getY() >= world.getHeight())
         {
-            
+           
             world.removeObject(this);
             
+           
             
              
         }
-       
-       
-        
-        
-        
     }
 }

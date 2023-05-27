@@ -66,41 +66,20 @@ public class Elephant extends Actor
     {
         if(Greenfoot.isKeyDown("left"))
         {
-           move(-1);
+           move(-3);
            facing = "left";
         }
         else if(Greenfoot.isKeyDown("right"))
         {
-            move(1);
+            move(3);
             facing = "right";
         }
         
-        if(Greenfoot.isKeyDown("a"))
-        {
-            move(-1);
-            facing = "left";
-        }
-        else if(Greenfoot.isKeyDown("d"))
-        {
-            move(1);
-            facing = "right";
-        }
         
-        if(Greenfoot.isKeyDown("shift"))
-        {
-            move(-2);
-            facing = "left";
-            
-        }
-        
-        if(Greenfoot.isKeyDown("enter"))
-        {
-             move(2);
-             facing = "right";
-        }
         
         eat();
         avoid();
+        dodge();
         animateElephant();
         
     }
@@ -130,17 +109,29 @@ public class Elephant extends Actor
             removeTouching(Apple.class);
             MyWorld world = (MyWorld) getWorld();
             bombSound.play();
-            world.createBread();
-            if(isTouching(Bread.class))
-        {
-            removeTouching(Bread.class);
-            
-           
-        } 
-            
+            world.createBread(); 
+       
             
         }
         
         
     }
-}
+     public void dodge()
+    {
+         if(isTouching(Orange.class))
+         {
+            removeTouching(Orange.class);
+            MyWorld world = (MyWorld) getWorld();
+            bombSound.play();
+            world.decreaseScore();
+             
+       
+            
+        }
+        
+        
+    }
+   
+}   
+     
+
