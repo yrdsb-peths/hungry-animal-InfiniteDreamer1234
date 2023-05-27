@@ -1,14 +1,6 @@
-# Hungry Animal Tutorial
-This is the README.md file.
-Change this file to show your intended audience what you want them to see.
+Elephant's Adventure!
 
-You can use **Markdown** syntax to format this file to do things like **bold** or *italicize* text.
-[Markdown basics](https://www.markdownguide.org/getting-started/)
-
-This particular repository is the starting template for the Hungry Elephant tutorial.
-
-[Part 1: Greenfoot Basics](https://youtu.be/zxaa3X0MihI)
-
-[Part 2: Game Enhancements](https://youtu.be/TwID9i0Ey6o)
-
-[Part 3: Final Touches](https://youtu.be/GT-eFwa4Abc)
+  In this game, your main goal is to eat as many pieces of breads as possible with the elephant. Miss one piece of bread and it will be game over. There will also be apples and oranges falling during various points of the game. Eating the apple will spawn another piece of bread and eating the orange will deduct a point. Try your best to avoid the two as it will make the game signifacntly harder. Good luck! 
+  
+  
+  By: Justin 
