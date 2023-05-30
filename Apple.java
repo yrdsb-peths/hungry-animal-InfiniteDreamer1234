@@ -15,9 +15,11 @@ public class Apple extends Actor
     public void act()
     {
         
-       
+         // Apple falls downwards 
         setLocation(getX(), getY() +1);
         MyWorld world = (MyWorld) getWorld();
+        // Apple dissapears once it touches the bottom
+        
         if(getY() >= world.getHeight())
         {
             

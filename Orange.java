@@ -14,9 +14,12 @@ public class Orange extends Actor
      */
     public void act()
     {
-         setLocation(getX(), getY() +1);
+         
+        // Orange falls downwards. 
+        setLocation(getX(), getY() +1);
         
         MyWorld world = (MyWorld) getWorld();
+        // If the elephant doens't touch it, the object will dissapear. 
         if(getY() >= world.getHeight())
         {
            

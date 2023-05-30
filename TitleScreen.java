@@ -24,6 +24,11 @@ public class TitleScreen extends World
         prepare();
     }
 
+    
+    /**
+     * Wait until user presses enter
+     * to start the game 
+     */
     public void act()
     {
         if(Greenfoot.isKeyDown("space"))

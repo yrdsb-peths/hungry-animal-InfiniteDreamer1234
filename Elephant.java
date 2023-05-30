@@ -8,14 +8,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Elephant extends Actor
 {   
+    
+    // Sound effects 
     GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
-    GreenfootImage[] idleRight = new GreenfootImage[8]; 
-    GreenfootImage[] idleLeft = new GreenfootImage[8];
     GreenfootSound bombSound = new GreenfootSound("Bomb.mp3");
     
+    // Array for sprites 
+    GreenfootImage[] idleRight = new GreenfootImage[8]; 
+    GreenfootImage[] idleLeft = new GreenfootImage[8];
+    
+    
     String facing = "right" ;
+    
+    // Intervals of the animation changing 
     SimpleTimer animationTimer = new SimpleTimer();
     public Elephant ()
+    // Array elements to specific images 
     {
         for(int i = 0; i < idleRight.length; i++)
         {
@@ -31,10 +39,11 @@ public class Elephant extends Actor
         }
         
         animationTimer.mark();
-        
+        // Sets intial elephant image 
         setImage(idleRight[0]);
     }
 
+    // Animates the elephant 
     int imageIndex = 0;
     public void animateElephant()
     {
@@ -86,6 +95,10 @@ public class Elephant extends Actor
     
     
     
+    /**
+     * Eats the bread and increases the score. If eaten, it will
+     * spawn a new bread.
+     */ 
     public void eat()
     {
         if(isTouching(Bread.class))
@@ -102,6 +115,9 @@ public class Elephant extends Actor
         
     }
     
+    /**
+     * Eating the apple will spawn more pieces of bread. 
+     */
     public void avoid()
     {
          if(isTouching(Apple.class))
@@ -116,6 +132,10 @@ public class Elephant extends Actor
         
         
     }
+    
+    /**
+     * Eating the orange will decrease the score. 
+     */
      public void dodge()
     {
          if(isTouching(Orange.class))

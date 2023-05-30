@@ -27,9 +27,11 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1, false); 
         
+        // Creates an elephant 
         Elephant e = new Elephant();
         addObject(e, 300, 300);
         
+        // Creates a label 
         scorelabel = new Label(0, 80);
         addObject(scorelabel, 50, 50);
         
@@ -39,20 +41,20 @@ public class MyWorld extends World
         
         worldSound.playLoop();
     }
-    public void act()
-    {
-        if(Greenfoot.isKeyDown("space"))
-        {
-            MyWorld gameWorld = new MyWorld();
-            Greenfoot.setWorld(gameWorld);
-        }
-    }
-    
+    /*
+     * Once the bread touches the ground,
+     * the text "game over" will be displayed.
+     */
     public void gameOver()
     {
         Label gameOverLabel = new Label("Game Over", 100);
         addObject(gameOverLabel, 300, 200);
     }
+    /*
+     * This method will increase the score. Using the score
+     * it will spawn various fruits at various scores. 
+     */
+    
     public void increaseScore()
     {
         score++;
@@ -70,6 +72,10 @@ public class MyWorld extends World
         
         
     }
+    /*
+     * Method that decrease the score. 
+     */
+    
     public void decreaseScore()
     {
         score--;
@@ -77,7 +83,9 @@ public class MyWorld extends World
     }
     
     
-    
+    /*
+     * Method that will spawn a piece of bread  
+     */
     public void createBread()
     {
         Bread bread = new Bread();
@@ -86,7 +94,9 @@ public class MyWorld extends World
         addObject(bread, x, y);
         
     }
-    
+    /*
+     * Method that will spawn an apple 
+     */
     public void createApple()
     {
         Apple apple = new Apple();
@@ -95,6 +105,9 @@ public class MyWorld extends World
         addObject(apple, x, y);
     }
     
+    /*
+     * Method that will spawn an orange
+     */
      public void createOrange()
     {
         Orange orange = new Orange();
